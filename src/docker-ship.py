@@ -1,6 +1,8 @@
+#!/usr/bin/env python
+
 import json
 import sys
-
+import os
 # Valid Commands
 def set_image(command, imagename):
     command[u'image'] = imagename
@@ -54,7 +56,8 @@ def validate_and_run(inst):
         else:
             print("Bad command: ", k)
     final_command = base_command[u'start'] + " " +  " ".join(base_command[u'args']) + " " + base_command[u'image']
-    print(final_command)
+    print(i"Running: " + final_command)
+    os.system(final_command)
 
 def launch_instance(filename):
     try:
