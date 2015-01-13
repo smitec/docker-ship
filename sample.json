@@ -1,16 +1,23 @@
 [
 {
-    "image": "nginx",
-    "name": "ng",
+    "image": "training/postgres",
+    "name": "db",
     "tty": true,
     "interactive": true,
     "detached": true
 },
 {
-    "image": "django",
-    "name": "dj",
+    "image": "training/webapp",
+    "name": "flaskapp",
     "tty": true,
     "interactive": true,
-    "detached": true
+    "detached": true,
+    "command": "python app.py"
+    "ports": {
+        5000 : 5000
+    },
+    "link": {
+        "db":"db"
+    }
 }
 ]
