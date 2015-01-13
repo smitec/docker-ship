@@ -78,7 +78,7 @@ def validate_and_run(inst):
         else:
             print("Bad command: ", k)
     final_command = base_command[u'start'] + " " +  " ".join(base_command[u'args']) + \
-        " " + base_command[u'image'] + " " + base_image[u'cmd']
+        " " + base_command[u'image'] + " " + base_command[u'cmd']
     print("Running: " + final_command)
     os.system(final_command)
 
