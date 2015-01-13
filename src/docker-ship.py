@@ -32,16 +32,16 @@ def map_port(command, src, dest):
     command[u'args'] += ['-p ' + str(src) + ':' + str(dest)]
 
 def port_mapping(command, ports):
-    for s,d in ports:
-        map_port(command, s, d)
+    for s in ports:
+        map_port(command, s, ports[s])
 
 def link_container(command, src, dest):
     command[u'args'] += ['--link ' + src + ':' + dest]
 
 #TODO: this is basically the port mapping function...
 def container_linking(command, links):
-    for s,d in links:
-        link_container(command, s, d)
+    for s in links:
+        link_container(command, s, links[s])
 
 COMMAND_SET = {
     u'image': set_image,
