@@ -1,0 +1,16 @@
+[
+{
+    "image": "nginx",
+    "name": "ng",
+    "tty": true,
+    "interactive": true,
+    "detached": true
+},
+{
+    "image": "django",
+    "name": "dj",
+    "tty": true,
+    "interactive": true,
+    "detached": true
+}
+]
