@@ -56,7 +56,7 @@ def validate_and_run(inst):
         else:
             print("Bad command: ", k)
     final_command = base_command[u'start'] + " " +  " ".join(base_command[u'args']) + " " + base_command[u'image']
-    print(i"Running: " + final_command)
+    print("Running: " + final_command)
     os.system(final_command)
 
 def launch_instance(filename):
