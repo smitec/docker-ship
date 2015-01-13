@@ -49,7 +49,8 @@ def print_help():
     print(message)   
 
 def validate_and_run(inst):
-    base_command = {u'start':"docker run", u'args':[], u'image':''}
+    #TODO: investigate how to move sudo outside of here
+    base_command = {u'start':"sudo docker run", u'args':[], u'image':''}
     for k in inst.keys():
         if k in COMMAND_SET.keys():
             COMMAND_SET[k](base_command, inst[k])
